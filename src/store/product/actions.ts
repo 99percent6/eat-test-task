@@ -26,11 +26,11 @@ const actions: ActionTree<ProductState, RootState> = {
     const { size } = state.pagination
     const { result } = await ProductController.getAllProducts({ page, size })
     dispatch('toogleLoader', { value: false }, { root: true })
-    const [error, products] = result
-    if (products) {
-      commit(types.SET_LIST, products)
+    const [error, response] = result
+    if (response) {
+      commit(types.SET_LIST, response)
     }
-    return products
+    return response.items
   },
 }
 
