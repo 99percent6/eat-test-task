@@ -1,0 +1,19 @@
+@import '../variables/colors';
+$danger: map-get($colors, danger);
+$success: map-get($colors, success);
+
+.error {
+  color: $danger;
+  display: flex;
+  justify-content: center;
+}
+
+.success {
+  color: $success;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
